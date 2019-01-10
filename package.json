@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "friend finder application",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"Hello World!\"",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irohdesign/FriendFinder.git"
+  },
+  "author": "Jalia Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irohdesign/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/irohdesign/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
