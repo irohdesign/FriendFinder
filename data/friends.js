@@ -2,21 +2,24 @@
 
 // format of objects in JSON
 
-{
-    "name" : "Ahmed",
-    "photo" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores" : [
-        5,
-        2,
-        1,
-        3,
-        4,
-        5,
-        3,
-        2,
-        3,
-        4,
-        6
-    ]
-}
+table = [
+    {
+        "name" : "Ahmed",
+        "photo" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "scores" : [
+            5,
+            2,
+            1,
+            3,
+            4,
+            5,
+            3,
+            2,
+            3,
+            4,
+            6
+        ]
+    }
+]
 
+console.log(table);
