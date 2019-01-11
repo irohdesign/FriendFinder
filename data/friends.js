@@ -22,10 +22,12 @@ suitors = [
     }
 ]
 
-app.post("/add/Suitor", function(req,res) {
-    var newSuitor = req.body;
-    
-})
+// app.post("/add/suitor", function(req,res) {
+//     var newSuitor = req.body;
+//     console.log(newSuitor);
+
+//     res.json(suitors);
+// })
 
 console.log(suitors);
 

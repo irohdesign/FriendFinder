@@ -183,17 +183,24 @@
         $("#newFriend").on("click", function(event) {
             event.preventDefault();
 
+            var answerCont = [];
+
             var newSuitor = {
                 name : $("#name").val().trim(),
                 photoURL : $("#photoURL").val().trim(),
+                answerCont : [];
             };
+
+            console.log(answerCont);
+
+            console.log(newSuitor);
            
-            $.post("/add/Suitor", newSuitor)
-            .then(function(data) {
-                console.log(data);
-                location.href="/";
-            });
-        });
+        //     $.post("./add/suitor", newSuitor)
+        //         .then(function(data) {
+        //             console.log(data);
+        //             location.href="/";
+        //     });
+        // });
 
         // going to push values into the array
 
