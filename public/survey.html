@@ -38,7 +38,7 @@
                     <h4>Question 1</h4>
                     <p>You find it difficult to introduce yourself to other people.</p>
 
-                    <select>
+                    <select id="firstSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -51,7 +51,7 @@
                     <h4>Question 2</h4>
                     <p>You often get so lost in thoughts that you ignore or forget your surroundings.</p>
 
-                    <select>
+                    <select id="secondSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -64,7 +64,7 @@
                     <h4>Question 3</h4>
                     <p>You try to respond to emails as soon as possible and can't stand a messy inbox.</p>
 
-                    <select>
+                    <select id="thirdSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -77,7 +77,7 @@
                     <h4>Question 4</h4>
                     <p>You find it easy to stay relaxed, even when there is some pressure.</p>
 
-                    <select>
+                    <select id="fourthSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -90,7 +90,7 @@
                     <h4>Question 5</h4>
                     <p>You do not usually initiate conversations.</p>
 
-                    <select>
+                    <select id="fifthSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -103,7 +103,7 @@
                     <h4>Question 6</h4>
                     <p>You rarely do something just out of sheer curiosity.</p>
 
-                    <select>
+                    <select id="sixthSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -116,7 +116,7 @@
                     <h4>Question 7</h4>
                     <p>You feel superior to people.</p>
 
-                    <select>
+                    <select id="seventhSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -129,7 +129,7 @@
                     <h4>Question 8</h4>
                     <p>Being organized is more important to you than being adaptable.</p>
 
-                    <select>
+                    <select id="eigthSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -142,7 +142,7 @@
                     <h4>Question 9</h4>
                     <p>You are usually highly motivated and energetic.</p>
 
-                    <select>
+                    <select id="ninthSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -155,7 +155,7 @@
                     <h4>Question 10</h4>
                     <p>Winning a debate matters less to you than making sure no one gets upset.</p>
 
-                    <select>
+                    <select id="tenthSelect">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -185,10 +185,31 @@
 
             var answerCont = [];
 
+            var firstSelected = $("#firstSelect option:selected").text();
+
+            var secondSelected = $("#secondSelect option:selected").text();
+
+            var thirdSelected = $("#thirdSelect option:selected").text();
+
+            var fourthSelected = $("#fourthSelect option:selected").text();
+
+            var fifthSelected = $("#fifthSelect option:selected").text();
+
+            var sixthSelected = $("#sixthSelect option:selected").text();
+
+            var seventhSelected = $("#seventhSelect option:selected").text();
+
+            var eigthSelected = $("#eigthSelect option:selected").text();
+
+            var ninthSelected = $("#ninthSelect option:selected").text();
+
+            var tenthSelected = $("#tenthSelect option:selected").text();
+
+
             var newSuitor = {
                 name : $("#name").val().trim(),
                 photoURL : $("#photoURL").val().trim(),
-                answerCont : [];
+                answerCont : [firstSelected, secondSelected, thirdSelected, fourthSelected, fifthSelected, sixthSelected, seventhSelected, eigthSelected, ninthSelected, tenthSelected];
             };
 
             console.log(answerCont);
@@ -200,12 +221,12 @@
         //             console.log(data);
         //             location.href="/";
         //     });
-        // });
+        })
 
         // going to push values into the array
 
         // set value for that object's img url also
-    </script>
+        </script>
 
 </body>
 
