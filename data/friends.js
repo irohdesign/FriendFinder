@@ -22,6 +22,11 @@ suitors = [
     }
 ]
 
+app.post("/add/Suitor", function(req,res) {
+    var newSuitor = req.body;
+    
+})
+
 console.log(suitors);
 
 module.exports.suitors = suitors;

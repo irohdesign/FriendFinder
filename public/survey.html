@@ -5,7 +5,7 @@
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
 
 </head>
 
@@ -21,12 +21,12 @@
             <form>
                 <div class="you-question">
                     <label>Name (Required)</label>
-                    <input type="text">
+                    <input type="text" id="name">
                 </div>
 
                 <div class="you-question">
                     <label>Link to Photo Image (Required)</label>
-                    <input type="text">
+                    <input type="text" id="photoURL">
                 </div>
             </form><!-- end of form -->
         </div><!-- end of about-you -->
@@ -112,11 +112,9 @@
                     </select>
                 </div>
 
-                <!-- KEEP ADDING QUESTIONS -->
-
                 <div class="question">
                     <h4>Question 7</h4>
-                    <p>You try to respond to emails as soon as possible and can't stand a messy inbox.</p>
+                    <p>You feel superior to people.</p>
 
                     <select>
                         <option>1</option>
@@ -129,7 +127,7 @@
 
                 <div class="question">
                     <h4>Question 8</h4>
-                    <p>You try to respond to emails as soon as possible and can't stand a messy inbox.</p>
+                    <p>Being organized is more important to you than being adaptable.</p>
 
                     <select>
                         <option>1</option>
@@ -142,7 +140,7 @@
 
                 <div class="question">
                     <h4>Question 9</h4>
-                    <p>You try to respond to emails as soon as possible and can't stand a messy inbox.</p>
+                    <p>You are usually highly motivated and energetic.</p>
 
                     <select>
                         <option>1</option>
@@ -155,7 +153,7 @@
 
                 <div class="question">
                     <h4>Question 10</h4>
-                    <p>You try to respond to emails as soon as possible and can't stand a messy inbox.</p>
+                    <p>Winning a debate matters less to you than making sure no one gets upset.</p>
 
                     <select>
                         <option>1</option>
@@ -165,6 +163,8 @@
                         <option>5</option>
                     </select>
                 </div>
+
+                <button id="newFriend">Find me my match!</button>
             </form>
 
         </div>
@@ -172,6 +172,33 @@
 
     </div>
 
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        // creates a new object based on the values input up above
+
+        $("#newFriend").on("click", function(event) {
+            event.preventDefault();
+
+            var newSuitor = {
+                name : $("#name").val().trim(),
+                photoURL : $("#photoURL").val().trim(),
+            };
+           
+            $.post("/add/Suitor", newSuitor)
+            .then(function(data) {
+                console.log(data);
+                location.href="/";
+            });
+        });
+
+        // going to push values into the array
+
+        // set value for that object's img url also
+    </script>
 
 </body>
 
