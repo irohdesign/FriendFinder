@@ -23,3 +23,5 @@ suitors = [
 ]
 
 console.log(suitors);
+
+module.exports.suitors = suitors;
